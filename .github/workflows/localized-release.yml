@@ -42,11 +42,15 @@ jobs:
           tools_dir=${tools_dirs[-1]}
           "$tools_dir/apksigner" verify --verbose --print-certs "$apk"
           "$tools_dir/aapt" dump badging "$apk" > "$RUNNER_TEMP/apk-badging.txt"
-          if rg -q '^application-debuggable' "$RUNNER_TEMP/apk-badging.txt"; then
+          if grep -q '^application-debuggable' "$RUNNER_TEMP/apk-badging.txt"; then
             echo '::error::Release APK must not be debuggable'
             exit 1
           fi
-          rg '^locales:.*\x27zh-CN\x27' "$RUNNER_TEMP/apk-badging.txt"
+          grep -E '^(package:|application-label:|locales:)' "$RUNNER_TEMP/apk-badging.txt"
+          if ! grep -Eq "^locales:.*'zh-r?CN'" "$RUNNER_TEMP/apk-badging.txt"; then
+            echo '::error::Release APK is missing Simplified Chinese resources'
+            exit 1
+          fi
           mkdir -p dist
           cp "$apk" dist/biometric-app-lock-zh-CN-release.apk
           (cd dist && sha256sum biometric-app-lock-zh-CN-release.apk > SHA256SUMS.txt)
