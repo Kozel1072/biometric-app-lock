@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">生物识别应用锁</string>
+    <string name="module_description">在系统框架层面，通过指纹或人脸识别保护你选择的应用</string>
+
+    <string name="app_bar_title">生物识别应用锁</string>
+
+    <string name="tab_dashboard">首页</string>
+    <string name="tab_apps">应用</string>
+    <string name="tab_settings">设置</string>
+
+    <string name="dashboard_locked_apps_title">已锁定的应用</string>
+    <string name="dashboard_locked_apps_all">全部</string>
+    <string name="dashboard_locked_apps_more">更多</string>
+    <string name="env_footer_unbound">未连接 Xposed</string>
+
+    <string name="status_running">正在系统框架中运行</string>
+    <string name="status_framework">%1$s %2$s（API %3$d）</string>
+    <string name="status_inactive">模块未激活</string>
+    <string name="status_inactive_action">请在 Xposed 管理器中启用模块，勾选“系统框架”作用域，然后重启设备</string>
+    <string name="status_reboot_required">需要重启</string>
+    <string name="status_reboot_required_reason">请重启手机以加载更新后的模块</string>
+    <string name="status_locked_empty">尚未锁定任何应用</string>
+    <string name="status_locked_empty_action">选择需要通过指纹或锁屏凭据解锁的应用</string>
+    <string name="status_action_choose_apps">选择应用</string>
+    <string name="status_no_unlock_method">无法打开已锁定的应用</string>
+    <string name="status_no_unlock_method_action">没有可用的解锁方式，请设置锁屏凭据或录入指纹</string>
+    <string name="status_action_security_settings">打开安全设置</string>
+
+    <string name="dashboard_biometric_title">硬件</string>
+    <string name="dashboard_biometric_fingerprint">指纹</string>
+    <string name="dashboard_biometric_face">人脸识别</string>
+    <string name="dashboard_biometric_class_strong">3 级（强）</string>
+    <string name="dashboard_biometric_class_weak">2 级（弱）</string>
+    <string name="dashboard_biometric_chip_enrolled">已录入</string>
+    <plurals name="dashboard_biometric_chip_count">
+        <item quantity="other">已录入 %1$d 项</item>
+    </plurals>
+    <string name="dashboard_biometric_chip_not_enrolled">未录入</string>
+    <string name="dashboard_biometric_chip_no_sensor">无传感器</string>
+    <string name="dashboard_biometric_chip_unavailable">不可用</string>
+    <string name="dashboard_biometric_chip_update">需要更新</string>
+    <string name="dashboard_biometric_last_auth">上次验证</string>
+
+    <string name="apps_search_placeholder">搜索应用</string>
+    <string name="apps_search_clear_cd">清除搜索</string>
+    <string name="apps_search_menu_cd">更多选项</string>
+    <string name="apps_menu_show_system">显示系统应用</string>
+    <string name="apps_menu_clear_selection">清除选择（%1$d）</string>
+    <string name="apps_snackbar_selection_cleared">已清除选择</string>
+    <string name="apps_snackbar_undo">撤销</string>
+    <string name="apps_empty_no_matches">没有匹配的应用</string>
+    <string name="apps_user_id">用户 %1$d</string>
+
+    <string name="app_type_system">系统应用</string>
+    <string name="app_type_user">用户应用</string>
+
+    <string name="settings_appearance">外观</string>
+    <string name="settings_theme">主题</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_theme_dark">深色</string>
+    <string name="settings_dynamic_color">动态配色</string>
+    <string name="settings_dynamic_color_summary">使用壁纸中的颜色</string>
+    <string name="settings_floating_nav_bar">悬浮导航栏</string>
+    <string name="settings_floating_nav_bar_summary">将导航栏显示为悬浮胶囊样式</string>
+
+    <string name="settings_hide_launcher">隐藏桌面图标</string>
+    <string name="settings_hide_launcher_summary">改为从 Xposed 管理器打开应用</string>
+    <string name="settings_hide_launcher_confirm_title">隐藏桌面图标？</string>
+    <string name="settings_hide_launcher_confirm_body">图标将从桌面启动器中消失，你仍可从 Xposed 管理器打开此应用。</string>
+    <string name="settings_hide_launcher_confirm_action">隐藏</string>
+
+    <string name="settings_lock">锁定行为</string>
+    <string name="settings_protection">隐私</string>
+    <string name="settings_relock_delay_title">重新锁定延迟</string>
+    <string name="settings_relock_screen_off_title">息屏时重新锁定</string>
+    <string name="settings_relock_screen_off_summary">屏幕关闭时锁定所有受保护的应用</string>
+    <string name="settings_relock_task_removed_title">移除最近任务时重新锁定</string>
+    <string name="settings_relock_task_removed_summary">从最近任务中划掉应用时，重新锁定该应用</string>
+
+    <string name="settings_block_screenshots_title">禁止截屏</string>
+    <string name="settings_block_screenshots_summary">在截屏、录屏和最近任务预览中隐藏受保护的应用。禁用 FLAG_SECURE 的模块会覆盖此设置</string>
+    <string name="settings_hide_notification_content_title">隐藏通知内容</string>
+    <string name="settings_hide_notification_content_summary">应用处于锁定状态时，隐藏其通知中的文字</string>
+    <string name="settings_unlock_prompt">解锁提示</string>
+    <string name="settings_unlock_confirmation_title">需要确认</string>
+    <string name="settings_unlock_confirmation_summary">人脸识别成功后，需点击“确认”才能打开应用</string>
+    <string name="unlock_section">解锁</string>
+    <string name="unlock_biometrics_title">生物识别</string>
+    <string name="unlock_biometrics_default">默认</string>
+    <string name="unlock_biometrics_any">任意</string>
+    <string name="unlock_biometrics_strongest">强</string>
+    <string name="unlock_biometrics_none">不使用</string>
+    <string name="unlock_biometrics_any_summary">2 级（弱）及以上</string>
+    <string name="unlock_biometrics_any_summary_face">2 级（弱）及以上，包括人脸识别</string>
+    <string name="unlock_biometrics_strongest_summary">仅限 3 级（强）</string>
+    <string name="unlock_biometrics_strongest_summary_face">仅限 3 级（强），不包括人脸识别</string>
+    <string name="unlock_biometrics_strongest_summary_same">仅限 3 级（强），在此设备上无区别</string>
+    <string name="unlock_biometrics_none_summary">仅使用锁屏凭据</string>
+    <string name="unlock_biometrics_default_resolved">默认（%1$s）</string>
+    <string name="unlock_screen_lock_title">允许使用锁屏凭据</string>
+    <string name="unlock_screen_lock_summary">生物识别失败时，使用 PIN 码、图案或密码解锁</string>
+    <string name="unlock_screen_lock_unset">尚未设置锁屏凭据</string>
+    <string name="settings_opaque_unlock_prompt_title">兼容模式</string>
+    <string name="settings_opaque_unlock_prompt_summary">使用不透明的验证界面。如果验证提示在你的系统上自动关闭，请启用此选项</string>
+    <string name="settings_prevent_uninstall_title">防止卸载</string>
+    <string name="settings_prevent_uninstall_summary">阻止卸载此应用。如需移除，请先禁用模块并重启设备</string>
+    <string name="settings_self_lock_section">应用设置锁</string>
+    <string name="settings_self_lock_title">需要生物识别解锁</string>
+    <string name="settings_self_lock_summary">打开此应用时，需通过生物识别或锁屏凭据验证</string>
+    <string name="settings_self_lock_biometrics_title">生物识别</string>
+    <string name="settings_self_lock_credential_title">允许使用锁屏凭据</string>
+    <string name="settings_self_lock_credential_summary">生物识别失败时，使用 PIN 码、图案或密码解锁</string>
+    <string name="uninstall_blocked_toast">此应用已受保护，无法卸载</string>
+    <string name="settings_app_management_title">应用管理</string>
+    <string name="settings_app_management_summary">安装、更新或卸载应用前进行验证</string>
+
+    <string name="app_management_title">应用管理</string>
+    <string name="app_management_description">仅在打开 Android 安装界面时提示验证，因此不涵盖通过 Play 商店或 adb 进行的静默安装。卸载验证涵盖所有来源。验证通过后，短时间内同类操作无需重复验证。</string>
+    <string name="app_management_install_title">安装应用需生物识别验证</string>
+    <string name="app_management_install_summary">打开 Android 安装界面前进行验证</string>
+    <string name="app_management_uninstall_title">卸载应用需生物识别验证</string>
+    <string name="app_management_uninstall_summary">通过桌面、设置、Play 商店或 adb 卸载应用前进行验证</string>
+
+    <string name="biometric_prompt_uninstall_title">卸载 %1$s</string>
+    <string name="biometric_prompt_default_target">应用</string>
+
+    <string name="settings_diagnostics">诊断</string>
+    <string name="settings_about_entry">关于</string>
+    <string name="settings_about_entry_summary">版本 %1$s</string>
+    <string name="settings_lsposed_framework">Xposed 框架</string>
+    <string name="settings_lsposed_framework_unbound">未连接</string>
+
+    <string name="self_lock_prompt_title">使用指纹解锁</string>
+    <string name="self_lock_action">点击解锁</string>
+    <string name="self_lock_use_credential">使用锁屏凭据</string>
+    <string name="self_lock_error_failed">验证失败，请重试。</string>
+    <string name="self_lock_error_lockout">尝试次数过多，请使用锁屏凭据。</string>
+    <string name="biometric_prompt_unlock_title">解锁 %1$s</string>
+
+    <string name="about_title">关于</string>
+    <string name="about_back_cd">返回</string>
+    <string name="about_app_name">生物识别应用锁</string>
+    <string name="about_source_title">源代码</string>
+    <string name="about_source_summary">在 GitHub 上查看项目</string>
+    <string name="about_report_issue_title">功能建议或问题反馈</string>
+    <string name="about_report_issue_summary">在 GitHub 上提交 Issue</string>
+    <string name="about_libxposed_api_title">libxposed API</string>
+    <string name="about_framework_title">Xposed 框架</string>
+    <string name="about_whats_new_title">更新内容</string>
+    <string name="about_whats_new_summary">v%1$s 的变更</string>
+
+    <string name="whats_new_version_badge">v%1$s</string>
+    <string name="whats_new_title">%1$s 的更新内容</string>
+    <string name="whats_new_released">发布于 %1$s</string>
+    <string name="whats_new_got_it">知道了</string>
+    <string name="about_section_links">链接</string>
+    <string name="about_section_release">发行版本</string>
+    <string name="about_section_debug">调试</string>
+    <string name="about_debug_hot_reload_title">触发热重载</string>
+    <string name="about_debug_hot_reload_summary">在 system_server 中重新加载模块，无需重启设备</string>
+
+    <string name="app_detail_title">应用详情</string>
+
+    <string name="app_detail_override_title">覆盖全局设置</string>
+    <string name="app_detail_override_summary">为此应用使用单独的锁定设置</string>
+    <string name="app_detail_relock_delay_title">重新锁定延迟</string>
+    <string name="app_detail_relock_delay_immediate">立即</string>
+    <string name="app_detail_relock_delay_30s">30 秒后</string>
+    <string name="app_detail_relock_delay_1m">1 分钟后</string>
+    <string name="app_detail_relock_delay_3m">3 分钟后</string>
+    <string name="app_detail_relock_delay_5m">5 分钟后</string>
+    <string name="app_detail_relock_delay_10m">10 分钟后</string>
+    <string name="app_detail_relock_delay_30m">30 分钟后</string>
+    <string name="app_detail_relock_delay_never">永不</string>
+    <string name="app_detail_relock_delay_custom">自定义</string>
+    <string name="app_detail_relock_delay_custom_minutes">分钟</string>
+    <string name="app_detail_relock_delay_after_seconds">%1$d 秒后</string>
+    <string name="app_detail_relock_delay_after_minutes">%1$d 分钟后</string>
+
+    <string name="app_detail_block_screenshots_title">禁止截屏</string>
+    <string name="app_detail_block_screenshots_summary">在截屏、录屏和最近任务预览中隐藏此应用</string>
+
+    <string name="app_detail_activities_section">活动页面</string>
+    <string name="app_detail_allowed_row_empty">选择无需解锁即可打开的活动页面</string>
+    <string name="app_detail_allowed_count">已允许 %1$d 项</string>
+    <string name="app_detail_allowed_screen_desc">打开应用的其他页面时仍需解锁。从勾选的页面按返回键可能绕过验证提示</string>
+    <string name="app_detail_allowed_recent">验证提示时间：%1$s</string>
+    <string name="app_detail_allowed_main_badge">启动入口</string>
+    <string name="app_detail_allowed_main_confirm_title">允许启动入口页面？</string>
+    <string name="app_detail_allowed_main_confirm_body">点击应用图标时会打开此页面。允许此页面将导致整个应用失去保护。</string>
+    <string name="app_detail_locked_row_empty">未选择活动页面时，锁定整个应用</string>
+    <string name="app_detail_locked_count">已锁定 %1$d 项</string>
+    <string name="app_detail_locked_screen_desc">其他页面无需验证即可打开。如果不勾选任何页面，则锁定整个应用</string>
+    <string name="app_detail_activities_mode_allow">允许所选</string>
+    <string name="app_detail_activities_mode_lock">锁定所选</string>
+    <string name="app_detail_allowed_search">搜索活动页面</string>
+    <string name="app_detail_allowed_no_matches">没有匹配的活动页面</string>
+    <string name="app_detail_allowed_browse_empty">此应用未声明任何活动页面</string>
+
+    <string name="app_detail_section_advanced">高级</string>
+    <string name="app_detail_open_app_info_title">打开系统应用信息</string>
+    <string name="app_detail_open_app_info_summary">打开 Android 系统中此应用的设置页面</string>
+
+    <string name="settings_updates">更新</string>
+    <string name="updates_check_title">检查更新</string>
+    <string name="updates_check_summary">在 GitHub 上查找新版本</string>
+    <string name="updates_auto_check_title">自动检查更新</string>
+    <string name="updates_auto_check_summary">打开应用时检查更新</string>
+
+    <string name="updates_dialog_up_to_date_title">已是最新版本</string>
+    <string name="updates_dialog_up_to_date_body">v%1$s 已是最新版本</string>
+    <string name="updates_dialog_available_title">发现新版本</string>
+    <string name="updates_dialog_available_body">v%2$s 已发布（当前为 v%1$s）</string>
+    <string name="updates_dialog_failed_title">检查更新失败</string>
+    <string name="updates_dialog_failed_offline">无网络连接</string>
+    <string name="updates_dialog_failed_network">无法连接 GitHub，请稍后重试。</string>
+    <string name="updates_dialog_failed_service_unavailable">GitHub 暂时不可用，请稍后重试。</string>
+    <string name="updates_rate_limit_context">GitHub 对未登录请求的限制为每小时 60 次，同一 IP 地址共享此额度。</string>
+    <string name="updates_dialog_rate_limited_title">已达到 GitHub 请求上限</string>
+    <string name="updates_dialog_rate_limited_body">请求过于频繁，请%1$s重试。</string>
+    <string name="updates_dialog_rate_limited_body_unknown">请求过于频繁，请稍后重试。</string>
+    <string name="updates_dialog_close">关闭</string>
+    <string name="updates_dialog_open_release">查看发行版本</string>
+    <string name="updates_dialog_retry">重试</string>
+
+    <string name="about_changelog_title">更新日志</string>
+    <string name="about_changelog_summary">查看各版本的更新说明</string>
+    <string name="about_tagline">通过指纹、人脸识别或锁屏凭据保护应用</string>
+    <string name="about_star_on_github">在 GitHub 上点亮星标</string>
+    <string name="about_donate">请作者喝杯咖啡</string>
+    <string name="about_licenses_title">开源许可</string>
+    <string name="about_licenses_summary">此应用使用的第三方库</string>
+    <string name="about_section_device">此设备</string>
+    <string name="about_android_title">Android</string>
+    <string name="about_android_summary">%1$s（API %2$d）</string>
+    <string name="changelog_jump_top">跳到顶部</string>
+    <string name="changelog_jump_bottom">跳到底部</string>
+
+    <string name="changelog_title">更新日志</string>
+    <string name="changelog_fetch_failed">无法加载更新日志</string>
+    <string name="changelog_retry">重试</string>
+    <string name="changelog_got_it">完成</string>
+    <string name="changelog_see_full">查看完整更新日志</string>
+    <string name="changelog_open_link">在 GitHub 上打开</string>
+    <string name="changelog_area_auth">解锁</string>
+    <string name="changelog_area_hooks">Hook</string>
+    <string name="changelog_area_scope">受保护的应用</string>
+    <string name="changelog_area_ui">界面</string>
+    <string name="changelog_area_deps">依赖</string>
+    <string name="changelog_area_other">其他</string>
+
+    <string name="change_type_feat">新增</string>
+    <string name="change_type_fix">修复</string>
+    <string name="change_type_refactor">重构</string>
+    <string name="change_type_perf">性能</string>
+    <string name="change_type_security">安全</string>
+    <string name="change_type_revert">回退</string>
+    <string name="change_type_ci">CI/CD</string>
+    <string name="change_type_test">测试</string>
+    <string name="change_type_misc">杂项</string>
+    <string name="change_type_docs">文档</string>
+    <string name="change_type_chore">维护</string>
+    <string name="change_type_breaking">不兼容变更</string>
+
+    <string name="updates_sheet_title_checking">正在检查…</string>
+    <string name="updates_sheet_title_up_to_date">检查更新</string>
+    <string name="updates_sheet_title_available">发现新版本</string>
+    <string name="updates_sheet_title_failed">检查更新失败</string>
+    <string name="updates_sheet_title_offline">无网络连接</string>
+    <string name="updates_sheet_title_service_unavailable">GitHub 不可用</string>
+    <string name="updates_sheet_title_rate_limited">GitHub 请求受限</string>
+    <string name="updates_sheet_up_to_date_callout">当前已是最新版本</string>
+    <string name="updates_sheet_version_delta">v%1$s → v%2$s</string>
+    <string name="updates_sheet_download">下载</string>
+    <string name="updates_sheet_skip_version">跳过此版本</string>
+    <string name="updates_sheet_notes_unavailable">此版本暂无更新说明</string>
+    <string name="updates_sheet_cached_caption">显示上次检查的结果</string>
+    <plurals name="updates_sheet_change_count">
+        <item quantity="other">%1$d 项变更</item>
+    </plurals>
+
+    <string name="about_send_logs_title">导出日志</string>
+    <string name="about_send_logs_summary">保存模块日志，以便附在问题报告中</string>
+    <string name="about_send_logs_no_root">需要 root 权限</string>
+    <string name="logs_sheet_save">保存日志</string>
+    <string name="logs_sheet_send">发送日志</string>
+    <string name="logs_saved">日志已保存</string>
+    <string name="logs_save_failed">无法保存日志</string>
+    <string name="diagnostics_share_title">分享日志</string>
+    <string name="diagnostics_no_root">无法获取 root 权限，可能缺少 Xposed 框架日志。</string>
+    <string name="diagnostics_no_logs">未找到日志，请复现问题后重试。</string>
+    <string name="miui_face_scanning">人脸识别</string>
+    <string name="miui_face_success">完成</string>
+    <string name="miui_face_failed">请重试</string>
+</resources>
